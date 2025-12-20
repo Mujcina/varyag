@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html>
     <head>
+       
         <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
         <title>korabl</title>
+        <style>
+    /* Контейнер для слайдера */
+    .slider {
+        width: 100%;
+        max-width: 960px;
+        height: 540px;
+        position: relative;
+        overflow: hidden; /* Прячем картинки, которые не в фокусе */
+        margin: auto;
+    }
+
+    /* Скрываем радиокнопки */
+    .slider input {
+        display: none;
+    }
+
+    /* Обертка для всех картинок */
+    .slides {
+        display: flex;
+        width: 800%; /* 100% на каждую из 3-х картинок */
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* Логика переключения */
+    #btn1:checked ~ .slides { transform: translateX(0%); }
+    #btn2:checked ~ .slides { transform: translateX(-12.5%); }
+    #btn3:checked ~ .slides { transform: translateX(-25%); }
+    #btn4:checked ~ .slides { transform: translateX(-37.5%); }
+    #btn5:checked ~ .slides { transform: translateX(-50%); }
+    #btn6:checked ~ .slides { transform: translateX(-62.5%); }
+    #btn7:checked ~ .slides { transform: translateX(-75%); }
+    #btn8:checked ~ .slides { transform: translateX(-87.5%); }
+
+    /* Навигация (точки внизу) */
+    .navigation {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+    }
+
+    .bar {
+        width: 15px;
+        height: 15px;
+        border: 2px solid #fff;
+        margin: 6px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .bar:hover { background: #fff; }
+</style>
+<style>
+  .box {
+    width: 100%;
+    padding: 20px;
+    border: 3px solid #244244;
+    background-color: #44b391;
+    font-family: Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+  }
+</style>
     </head>
-    <body bgcolor="black"> 
-        <font color="ffffff">Да,это жесточайший корабль на моем сайте</font>
+    <body link="white" alink="white" vlink="white" bgcolor="345d6b">
+        <img src="лого.png" width="300px" height="150px" align="center"> 
+        <font color="ffffff" size="72" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-weight: bolder;">  — Круиз для настоящих Мужчинских Мужчин </font>
          <model-viewer 
             src="t1.glb"
             alt="корабль"
@@ -16,6 +90,47 @@
             min-field-of-view="1%"
             ar>
         </model-viewer>
+<font color="ffffff" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-weight: bolder;font-size: 42px;"><p align="left">Есть поговорка — Мужчина должен выглядеть чуть лучше обезьяны, но мы считаем, что Мужчина должен выглядеть как хочет, именно поэтому наш лайнер такой безупречный.</p>
+<div class="slider">
+    <input type="radio" name="r" id="btn1" checked>
+    <input type="radio" name="r" id="btn2">
+    <input type="radio" name="r" id="btn3">
+    <input type="radio" name="r" id="btn4">
+    <input type="radio" name="r" id="btn5">
+    <input type="radio" name="r" id="btn6">
+    <input type="radio" name="r" id="btn7">
+    <input type="radio" name="r" id="btn8">
 
+    <div class="slides">
+        <img src="1.png" style="border-radius: 15px;border: 5px solid #29515e;" alt="Слайд 1">
+        <img src="2.png" style="border-radius: 15px;border: 5px solid #29515e;" alt="Слайд 2">
+        <img src="3.png" style="border-radius: 15px;border: 5px solid #29515e;" alt="Слайд 3">
+        <img src="4.png" style="border-radius: 15px;border: 5px solid #29515e;" alt="Слайд 4">
+        <img src="5.png" style="border-radius: 15px;border: 5px solid #29515e;" alt="Слайд 5">
+        <img src="6.png" style="border-radius: 15px;border: 5px solid #29515e;" alt="Слайд 6">
+        <img src="7.png" style="border-radius: 15px;border: 5px solid #29515e;" alt="Слайд 7">
+        <img src="8.png" style="border-radius: 15px;border: 5px solid #29515e;" alt="Слайд 8">
+    </div>
+
+    <div class="navigation">
+        <label for="btn1" class="bar"></label>
+        <label for="btn2" class="bar"></label>
+        <label for="btn3" class="bar"></label>
+        <label for="btn4" class="bar"></label>
+        <label for="btn5" class="bar"></label>
+        <label for="btn6" class="bar"></label>
+        <label for="btn7" class="bar"></label>
+        <label for="btn8" class="bar"></label>
+
+    </div>
+</div>
+<p align="left">Жить, развлечься и поесть,а больше ничего</p>
+
+    <img src="зал.webp" style="width: 30% ; border-radius: 15px; border: 5px solid #29515e;" align="center">Концертный зал филармонии<p>
+    <img src="рестик.webp" style="width: 30% ; border-radius: 15px; border: 5px solid #29515e;"align="center">Ресторан "Персонажи"<p>
+    <img src="каюта.jpg" style="width: 30% ; border-radius: 15px; border: 5px solid #29515e;"align="center">Каюта "Премиум"<p>
+<div class="my-rectangle"></div><a href="анкета.html"><div class="box">
+  <p align="center">Забронировать</p>
+</div></a></div>
     </body>
 </html>
