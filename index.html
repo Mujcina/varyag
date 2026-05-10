@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-       
+       <style> 
+        @font-face {
+  font-family: 'Involve'; 
+  src: url(Involve-Medium.woff2) format('woff2'); 
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.body { 
+color: white; font-family: 'Involve', Arial, sans-serif; font-size: 36px;
+}</style>
         <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
         <title>korabl</title>
         <style>
@@ -11,7 +22,7 @@
         max-width: 960px;
         height: 540px;
         position: relative;
-        overflow: hidden; /* Прячем картинки, которые не в фокусе */
+        overflow: hidden; 
         margin: auto;
     }
 
@@ -23,7 +34,7 @@
     /* Обертка для всех картинок */
     .slides {
         display: flex;
-        width: 800%; /* 100% на каждую из 3-х картинок */
+        width: 800%; 
         height: 100%;
         transition: transform 0.5s ease-in-out;
     }
@@ -70,7 +81,7 @@
     padding: 20px;
     border: 3px solid #244244;
     background-color: #44b391;
-    font-family: Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande;
+    font-family: 'Involve','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
     color: #ffffff;
     border-radius: 10px;
     margin: 20px;
@@ -79,7 +90,7 @@
     </head>
     <body link="white" alink="white" vlink="white" bgcolor="345d6b">
         <img src="лого.png" width="300px" height="150px" align="center"> 
-        <font color="ffffff" size="72" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-weight: bolder;">  — Круиз для настоящих Мужчинских Мужчин </font>
+        <font color="ffffff" size="72" style="font-family:'Involve','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-weight: bolder;">  — Круиз для настоящих Мужчинских Мужчин </font>
          <model-viewer 
             src="t1.glb"
             alt="корабль"
@@ -91,7 +102,7 @@
             min-field-of-view="1%"
             ar>
         </model-viewer>
-<font color="ffffff" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-weight: bolder;font-size: 42px;"><p align="left">Есть поговорка — Мужчина должен выглядеть чуть лучше обезьяны, но мы считаем, что Мужчина должен выглядеть как хочет, именно поэтому наш лайнер такой безупречный.</p>
+<font color="ffffff" style="font-family:'Involve','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-weight: bolder;font-size: 42px;"><p align="left">Есть поговорка — Мужчина должен выглядеть чуть лучше обезьяны, но мы считаем, что Мужчина должен выглядеть как хочет, именно поэтому наш лайнер такой безупречный.</p>
 <div class="slider">
     <input type="radio" name="r" id="btn1" checked>
     <input type="radio" name="r" id="btn2">
